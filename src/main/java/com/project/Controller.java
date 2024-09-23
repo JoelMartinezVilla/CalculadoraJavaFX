@@ -26,7 +26,12 @@ public class Controller {
 
     @FXML
     private void actionAdd(ActionEvent event) {
-        if ((result == false && !hiddenNumber.isEmpty()) || (result == false && onScreenNumber.isEmpty())) {
+        if(result == true && hiddenNumber.isEmpty() && operator.isEmpty()){
+            onScreenNumber = "";
+            result = false;
+            onScreenNumber += ((Button) event.getSource()).getText();
+            updateTextResult();
+        }else{
             onScreenNumber += ((Button) event.getSource()).getText();
             updateTextResult();
         }
@@ -44,10 +49,8 @@ public class Controller {
             onScreenNumber = "";
             operator = ((Button) event.getSource()).getText();
             textResult.setText(operator);
-        } else if (result == true && onScreenNumber != "" && operator.isEmpty()) {
+        } else if (result == true && !onScreenNumber.isEmpty() && operator.isEmpty()) {
             hiddenNumber = onScreenNumber;
-            onScreenNumber = "";
-            result = false;
             operator = ((Button) event.getSource()).getText();
             textResult.setText(operator);
         }

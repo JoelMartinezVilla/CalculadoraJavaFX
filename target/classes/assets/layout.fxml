@@ -7,13 +7,17 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="332.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.Controller">
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="332.0" style="-fx-background-color: #444;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.Controller">
    <children>
-      <TextField fx:id="textResult" editable="false" prefHeight="86.0" prefWidth="311.0" style="-fx-background-radius: 20;">
+      <TextField fx:id="textResult" editable="false" prefHeight="86.0" prefWidth="311.0" style="-fx-background-radius: 20; -fx-background-color: lightgrey;">
          <FlowPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
          </FlowPane.margin>
+         <font>
+            <Font size="24.0" />
+         </font>
       </TextField>
       <GridPane alignment="CENTER" hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="353.0" prefWidth="310.0" vgap="13.0">
         <columnConstraints>
@@ -30,24 +34,78 @@
             <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="buttonCE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearEntry" style="-fx-background-radius: 13;" text="CE" GridPane.columnSpan="2" />
-            <Button fx:id="buttonC" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clear" style="-fx-background-radius: 13;" text="C" GridPane.columnIndex="2" />
-            <Button fx:id="buttonMult" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addOperator" prefWidth="70.0" style="-fx-background-radius: 13;" text="x" GridPane.columnIndex="3" />
-            <Button fx:id="buttonNumber7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13;" text="7" GridPane.rowIndex="1" />
-            <Button fx:id="buttonNumber8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="buttonNumber9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button fx:id="buttonDivision" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addOperator" style="-fx-background-radius: 13;" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button fx:id="buttonNumber4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13;" text="4" GridPane.rowIndex="2" />
-            <Button fx:id="buttonNumber5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="buttonNumber6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button fx:id="buttonMinus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addOperator" style="-fx-background-radius: 13;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button fx:id="buttonNumber1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13;" text="1" GridPane.rowIndex="3" />
-            <Button fx:id="buttonNumber2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="buttonNumber2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button fx:id="buttonPlus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addOperator" style="-fx-background-radius: 13;" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button fx:id="buttonNumber0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13;" text="0" GridPane.rowIndex="4" />
-            <Button fx:id="buttonDot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAddDot" style="-fx-background-radius: 13;" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Button id="buttonOperator" fx:id="buttonEqual" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#equals" style="-fx-background-radius: 13;" text="=" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+            <Button fx:id="buttonCE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearEntry" style="-fx-background-radius: 13; -fx-background-color: white;" text="CE" GridPane.columnSpan="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonC" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clear" style="-fx-background-radius: 13; -fx-background-color: white;" text="C" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonMult" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addOperator" prefWidth="70.0" style="-fx-background-radius: 13; -fx-background-color: white;" text="x" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonNumber7" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13; -fx-background-color: grey;" text="7" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonNumber8" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13; -fx-background-color: grey;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonNumber9" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13; -fx-background-color: grey;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonDivision" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addOperator" style="-fx-background-radius: 13; -fx-background-color: white;" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonNumber4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13; -fx-background-color: grey;" text="4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonNumber5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13; -fx-background-color: grey;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonNumber6" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13; -fx-background-color: grey;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonMinus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addOperator" style="-fx-background-radius: 13; -fx-background-color: white;" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonNumber1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13; -fx-background-color: grey;" text="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonNumber2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13; -fx-background-color: grey;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonNumber2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13; -fx-background-color: grey;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonPlus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addOperator" style="-fx-background-radius: 13; -fx-background-color: white;" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonNumber0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAdd" style="-fx-background-radius: 13; -fx-background-color: grey;" text="0" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="buttonDot" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#actionAddDot" style="-fx-background-radius: 13; -fx-background-color: white;" text="." GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button id="buttonOperator" fx:id="buttonEqual" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#equals" style="-fx-background-radius: 13; -fx-background-color: white;" text="=" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
          </children>
          <FlowPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
