@@ -3,7 +3,6 @@ package com.project;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import javafx.event.ActionEvent;
 
 public class Controller {
@@ -51,6 +50,8 @@ public class Controller {
             textResult.setText(operator);
         } else if (result == true && !onScreenNumber.isEmpty() && operator.isEmpty()) {
             hiddenNumber = onScreenNumber;
+            onScreenNumber = "";
+            result = false;
             operator = ((Button) event.getSource()).getText();
             textResult.setText(operator);
         }
